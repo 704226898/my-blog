@@ -2,6 +2,7 @@
   "name": "my-blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@ckeditor/ckeditor5-build-classic": "^19.0.2",
