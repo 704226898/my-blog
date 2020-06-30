@@ -1,0 +1,27 @@
+.home-page-main {
+  padding-top: 60px;
+  height: 100%;
+}
+
+
+.home-page-container{
+  height: 100%;
+}
+
+.center-column-container {
+  padding-left: 20rem;
+  height: 100%
+}
+
+@media screen and (max-width: 880px) {
+  .center-column-container {
+    padding-left: 15rem;
+  }
+  
+}
+
+@media screen and (max-width: 760px) {
+  .center-column-container {
+    padding-left: 0 ;
+  }
+}

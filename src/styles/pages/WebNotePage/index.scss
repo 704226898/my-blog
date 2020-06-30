@@ -1,0 +1,40 @@
+.web-article-page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.life-article-page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+
+
+.tag-list-container {
+  padding: 5px;
+  border-left: 1px solid #c0c0c0;
+  width: 230px;
+  height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .web-article-page-container {
+    flex-direction: column;
+
+  }
+
+  .life-article-page-container {
+    flex-direction: column;
+
+  }
+
+  .tag-list-container {
+    border-left: none;
+    height: auto;
+    border-bottom: 1px solid #c0c0c0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+.admin-left-column-container {
+  width: 15rem;
+  height: 100vh;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  border-right: 1px solid #c0c0c0;
+  background: white;
+  z-index: 10;
+
+  .left-column-user-message {
+    display: none;
+
+    .MuiTypography-body1 {
+      font-size: 25px !important;
+    }
+
+  }
+
+  .left-column-log-out {
+    display: none;
+  }
+
+}
+
+
+
+
+
+@media screen and (max-width: 760px) {
+  .left-column-user-message {
+    display: inherit !important;
+
+  }
+
+  .left-column-log-out {
+    display: flex !important;
+  }
+
+}

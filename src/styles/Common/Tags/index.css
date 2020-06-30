@@ -1,0 +1,22 @@
+.tags-container{
+  text-align: left;
+}
+
+.tags-container .selected{
+
+  background-color: #a19797;
+  color: white;
+}
+
+.tags-container .selected:hover{
+
+  background-color: #838386;
+  color: white;
+}
+
+
+
+.tags-container button{
+  margin-left: 20px;
+}
+

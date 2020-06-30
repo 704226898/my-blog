@@ -1,0 +1,13 @@
+.author-navBar-message-container {
+  height: 300px;
+  padding: 20px;
+  overflow: hidden;
+  border-bottom: solid 1px #c0c0c0;
+}
+
+.author-navBar-message-avatar img {
+
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}

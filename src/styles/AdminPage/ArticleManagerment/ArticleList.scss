@@ -1,0 +1,29 @@
+.admin-article-list-container {}
+
+.admin-article-list-container {
+  .tool-bar {
+    padding: 10px 20px;
+    text-align: right;
+    height: 60px;
+    border-bottom: solid 1px #c0c0c0;
+  }
+
+.MuiTableBody-root{
+  button{
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+.open-detail-modal{
+  color: cornflowerblue;
+  cursor: pointer;
+
+}
+
+.open-detail-modal:hover{
+  text-decoration: underline;
+}
+}

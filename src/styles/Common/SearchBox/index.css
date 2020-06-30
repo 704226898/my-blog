@@ -1,0 +1,18 @@
+.search-box-container .MuiFormControl-root {
+  min-width: 100px !important;
+  text-align: left; }
+
+.search-box-container .MuiOutlinedInput-input {
+  padding: 10px 15px; }
+
+.search-box-container .MuiInputLabel-outlined {
+  transform: translate(20px, 10px) scale(1); }
+
+.search-box-container .search-box-type {
+  margin: 0 20px; }
+
+.search-box-container .search-box-text {
+  margin: 0 20px; }
+
+.search-box-container button {
+  text-transform: inherit; }

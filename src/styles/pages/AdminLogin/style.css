@@ -1,0 +1,28 @@
+.admin-login-page{
+  background: royalblue;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login-form-container{
+  background: white;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  box-shadow: 1px 1px 1px #c0c0c0;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.login-form-container button{
+  float: right;
+  margin: 0 5px;
+}
+
+.login-form-container .MuiFormControl-root{
+ margin: 10px;
+}
