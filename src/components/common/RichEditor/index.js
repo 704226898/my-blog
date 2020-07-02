@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 
 import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-function RichEditor(props) {
-  const [detail, setDetail] = useState('');
+
+function RichEditor({setContent, content}) {
+  
+
   return (
     <div className="rich-text-editer">
       <CKEditor
@@ -24,7 +26,7 @@ function RichEditor(props) {
           ]
         }}
 
-        data={detail}
+        data={content}
         onInit={editor => {
           // You can store the "editor" and use when it is needed.
           console.log('Editor is ready to use!', editor);
@@ -32,10 +34,10 @@ function RichEditor(props) {
         onChange={(event, editor) => {
           const data = editor.getData();
           
-          setDetail(data)
+          setContent(data)
           
 
-          console.log({ event, editor, data });
+          // console.log({ event, editor, data });
         }}
         onBlur={editor => {
           console.log('Blur.', editor);
@@ -44,8 +46,6 @@ function RichEditor(props) {
           console.log('Focus.', editor);
         }}
       />
-
-
     </div>
   );
 
