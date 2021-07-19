@@ -26,13 +26,19 @@ export const getArticleByType = (type) => api.get(
   params: {
     type
   }
-}
-);
+});
 
 export const getArticleByTag = (tag) => api.get(
   APIContants.ARTICLE_TAG, {
   params: {
     tag
   }
-}
-);
+});
+
+
+export const createArticle = (article) => api.post(
+  APIContants.ARTICLE, article);
+
+
+export const deleteArticle = (id) => api.delete(
+  APIContants.ARTICLE + `/${id}`);

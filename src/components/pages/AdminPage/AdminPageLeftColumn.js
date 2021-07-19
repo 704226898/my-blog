@@ -7,8 +7,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 
-import '../../../../styles/AdminPage/LeftColumn/index.scss';
-import { AdminRouteConfig } from '../../../../constants/AdminRouteConfig';
+import '../../../styles/AdminPage/LeftColumn/index.scss';
+import { AdminRouteConfig } from '../../../constants/AdminRouteConfig';
 class LeftColumn extends Component {
   constructor(props) {
     super(props);

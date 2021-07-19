@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
 import {  withRouter } from 'mirrorx';
 import '../../../styles/TopBar/LeftColumn.css';
-import AuthorNavBarMessage from '../../common/AuthorNavBarMessage';
+import AuthorNavBarMessage from '../AuthorNavBarMessage/AuthorNavBarMessage';
 import NavBar from '../../pages/NavBar/NavBar';
 import TopBarContants from '../../../constants/TopBarContants';
 class LeftColumn extends Component {

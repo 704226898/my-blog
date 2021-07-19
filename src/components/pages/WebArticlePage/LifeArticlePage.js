@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../../styles/pages/WebNotePage/index.scss';
+import '../../../styles/pages/WebNotePage/WebNotePage.scss';
 import ArticleList from '../../common/ArticleList';
 import Tag from '../../common/Tags';
 import ArticleContants from '../../../constants/ArticleContants';

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'mirrorx';
 
-import { AdminRouteContants } from '../../../../constants/AdminRouteConfig';
-import AddArticlePage from '../ArticleManagePage/AddArticlePage';
-import ArticleManagerPage from '../ArticleManagePage/ArticleManagerPage';
-import UserManagerPage from '../UserManagePage/UserManagerPage';
+import { AdminRouteContants } from '../../../constants/AdminRouteConfig';
+import AddArticlePage from './ArticleManagePage/AddArticlePage';
+import ArticleManagerPage from './ArticleManagePage/ArticleManagerPage';
+import UserManagerPage from './UserManagePage/UserManagerPage';
 
 
 class CenterColumn extends Component {

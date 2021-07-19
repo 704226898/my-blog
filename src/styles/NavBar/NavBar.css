@@ -1,18 +1,28 @@
-.nav-bar-container{
-  padding:20px;
+.nav-bar-container {
+  padding: 20px;
+  display: flex;
 
+  flex-direction: column;
+  align-items: center;
 }
 
-.nav-item{
-  height:60px;
-  border-radius: 6px;
+.nav-item {
+  height: 40px;
+  width: 200px;
+  border-radius: 8px;
   margin-bottom: 10px;
-  border: solid 1px #c0c0c0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #e6e2e2;
 }
-.nav-item:hover{
-  background: #e9ecef;
-cursor: pointer;
+
+.nav-item:hover {
+  background: #95989b;
+  cursor: pointer;
+  color: #f0e9e9;
+}
+
+.nav-item:focus {
+  box-shadow:  10px 10px 10px beige;
 }

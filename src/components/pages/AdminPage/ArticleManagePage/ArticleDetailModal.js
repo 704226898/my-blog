@@ -13,7 +13,7 @@ const ArticleDetailModal = (props) => {
       <Modal isOpen={isOpen} toggle={closeFunc} className="article-detail-modal">
         <ModalHeader toggle={closeFunc}>{article.title}</ModalHeader>
         <ModalBody>
-          {article.content}
+          <div dangerouslySetInnerHTML={{__html:article.content}}></div>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={closeFunc}>Close</Button>{' '}

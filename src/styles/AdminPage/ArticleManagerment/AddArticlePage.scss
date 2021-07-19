@@ -1,7 +1,7 @@
 .admin-add-article {
   padding: 30px;
   text-align: left;
-
+  background-color: white;
   .article-title {
     max-width: 800px;
   }
@@ -11,8 +11,18 @@
   .article-tag {
     max-width: 200px;
   }
-.article-submit{
-  margin: 30px 0 ;
-}
+
+  .article-submit {
+    margin: 30px 0;
+  }
+
+  .preview-article{
+    border: 1px solid #c0c0c0;
+    border-radius: 8px;
+  }
+  .article-preview{
+    margin: 0 10px;
+  }
+
 
 }

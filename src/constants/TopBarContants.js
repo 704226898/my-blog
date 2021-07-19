@@ -1,5 +1,5 @@
 const TopBarContants={
-    welcomeTitle:'欢迎来到郭亿鸿的博客',
+    welcomeTitle:'blog',
     loginText:'管理员'
 }
 

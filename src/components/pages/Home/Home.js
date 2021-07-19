@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'mirrorx';
 import '../../../styles/Home/Home.css';
-import CenterColumn from './CenterColumn';
-import LeftColumn from './LeftColumn/LeftColumn';
+import CenterColumn from './HomeCenterColumn';
+import LeftColumn from './LeftColumn';
 import TopBar from '../../common/TopBar/TopBar';
 class Home extends Component {
   constructor(props) {

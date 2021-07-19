@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import LeftColumn from './LeftColumn';
+import AdminPageLeftColumn from './AdminPageLeftColumn';
 import AdminPageContants from '../../../constants/AdminPageContants';
 import '../../../styles/AdminPage/index.scss';
-import CenterColumn from './CenterColumn';
+import AdminPageCenterColumn from './AdminPageCenterColumn';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -67,9 +67,9 @@ class AdminPage extends Component {
 
 
         </div>
-        <LeftColumn isNavOpen={isNavOpen} logOutFuc={this.handleLogOut} />
+        <AdminPageLeftColumn isNavOpen={isNavOpen} logOutFuc={this.handleLogOut} />
         <div className="center-column-container">
-          <CenterColumn />
+          <AdminPageCenterColumn />
         </div>
 
       </div>

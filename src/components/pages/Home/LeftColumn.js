@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'mirrorx';
-import '../../../../styles/LeftColumn/LeftColumn.css';
-import AuthorNavBarMessage from '../../../common/AuthorNavBarMessage';
-import NavBar from '../../NavBar/NavBar';
+import '../../../styles/LeftColumn/LeftColumn.css';
+import AuthorNavBarMessage from '../../common/AuthorNavBarMessage/AuthorNavBarMessage';
+import NavBar from '../NavBar/NavBar';
 class LeftColumn extends Component {
   constructor(props) {
     super(props);

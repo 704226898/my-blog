@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect, withRouter } from 'mirrorx';
-import '../../../styles/TopBar/TopBar.css';
-import {Button} from 'reactstrap';
+import { connect, withRouter, actions } from 'mirrorx';
+import '../../../styles/TopBar/TopBar.scss';
+import { Button, UncontrolledTooltip } from 'reactstrap';
+import WbIncandescentIcon from '@material-ui/icons/WbIncandescent'
 import TopBarContants from '../../../constants/TopBarContants';
 import LeftColumn from './LeftColumn';
 
@@ -12,23 +13,27 @@ class TopBar extends Component {
     this.state = {
       isShowLeftColumn: false
     }
+    this.handleChangeStyleIconClick = this.handleChangeStyleIconClick.bind(this);
   }
 
-  handleAdminLogin=()=>{
+  handleAdminLogin = () => {
     this.props.history.push('/login');
   }
 
-  handleNavIconClick = () =>{
-    this.setState({isShowLeftColumn: !this.state.isShowLeftColumn});
+  handleNavIconClick = () => {
+    this.setState({ isShowLeftColumn: !this.state.isShowLeftColumn });
   }
 
-
+  handleChangeStyleIconClick = () => {
+    actions.app.changeSystemStyle();
+  }
   render() {
-    const {isShowLeftColumn} =this.state;
+    const { systemStyle } = this.props;
+    const { isShowLeftColumn } = this.state;
     return (
       <div className="top-bar-container">
         <div className="top-bar-left">
-          <div className="top-bar-nav-icon"  onClick={this.handleNavIconClick} >
+          <div className="top-bar-nav-icon" onClick={this.handleNavIconClick} >
 
           </div>
           <div className="top-bar-title">
@@ -38,11 +43,13 @@ class TopBar extends Component {
         </div>
 
         <div className="top-bar-right">
-          <Button  color='primary'  onClick={this.handleAdminLogin}      className="top-bar-login">
+          <WbIncandescentIcon id="changeStyleIcon" onClick={this.handleChangeStyleIconClick} />
+          <UncontrolledTooltip target="changeStyleIcon">{systemStyle === 'light' ? '夜间模式' : '关闭夜间模式'}</UncontrolledTooltip>
+          <Button color='primary' onClick={this.handleAdminLogin} className="top-bar-login">
             {TopBarContants.loginText}
           </Button>
         </div>
-      {isShowLeftColumn &&  <LeftColumn onNavBarItemClick={this.handleNavIconClick}/>}
+        {isShowLeftColumn && <LeftColumn onNavBarItemClick={this.handleNavIconClick} />}
       </div>
     );
   }
@@ -53,7 +60,7 @@ TopBar.propTypes = {
 
 const TopBarSmart = connect(state => {
   return {
-    // user: state.app.user
+    systemStyle: state.app.systemStyle
   };
 })(TopBar);
 

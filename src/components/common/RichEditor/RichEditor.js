@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import CKEditor from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ClassicEditor from '@ckeditor/ckeditor5-build-decoupled-document';
 
-function RichEditor({setContent, content}) {
+function RichEditor({onContentChange, content}) {
   
 
   return (
@@ -34,7 +34,7 @@ function RichEditor({setContent, content}) {
         onChange={(event, editor) => {
           const data = editor.getData();
           
-          setContent(data)
+          onContentChange(data)
           
 
           // console.log({ event, editor, data });

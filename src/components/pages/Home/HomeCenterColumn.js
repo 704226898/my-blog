@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'mirrorx';
-import WebArticlePage from '../../WebArticlePage';
-import LifeArticlePage from '../../LifeArticlePage';
-import ArticleDetails from '../../../common/ArticleDetails';
-import Laboratory from '../../Laboratory';
+import WebArticlePage from '../WebArticlePage/WebArticlePage';
+import LifeArticlePage from '../WebArticlePage/LifeArticlePage';
+import ArticleDetails from '../../common/ArticleDetails/ArticleDetails';
+import Laboratory from '../Laboratory';
 
 class CenterColumn extends Component {
   constructor(props) {

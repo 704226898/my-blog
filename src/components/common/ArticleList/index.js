@@ -46,8 +46,11 @@ class ArticleList extends Component {
   }
 
 
-  handleTitleClick = (id) => () => {
-    this.props.history.push(`/home/article/${id}`);
+  handleTitleClick = (article) => () => {
+    actions.app.updateCurrentArticle(article)
+
+
+    this.props.history.push(`/home/article/${article.id}`);
   }
 
 
@@ -55,8 +58,7 @@ class ArticleList extends Component {
     return (
       <div className="article-item" key={key}>
         <div className="article-item-main">
-          <div className="article-title" onClick={this.handleTitleClick(item.id)}>{item.title}</div>
-          <div className="article-content">{item.content}</div>
+          <div className="article-title" onClick={this.handleTitleClick(item)}>{item.title}</div>
         </div>
         <div className="article-item-footer">
           <div className="article-create-time">{item.create_date}</div>

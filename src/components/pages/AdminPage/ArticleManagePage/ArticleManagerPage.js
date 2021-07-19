@@ -10,8 +10,9 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import { Button } from '@material-ui/core';
+
 import ArticleDetailModal from './ArticleDetailModal';
+import ArticleDetailItem from './ArticleDetailItem';
 
 
 class ArticleManagerPage extends Component {
@@ -29,7 +30,7 @@ class ArticleManagerPage extends Component {
     });
   }
 
-  openDetailModal = (article) => () => {
+  openDetailModal = (article) => {
     this.setState({
       isDetailModalOpen: true,
       detailModalArticle: article
@@ -42,41 +43,20 @@ class ArticleManagerPage extends Component {
     })
   }
 
-  renderArticleItem = (aritcle) => {
+  onDeleteArticle = (id) => {
+    actions.app.deleteArticleById(id).then(() => {
+      actions.app.getAllArticle().then((response) => {
+        actions.app.updateArticle(response.data);
+      });
+    });
 
-    return (
-      <TableRow key={aritcle.id}>
-        <TableCell>
-          {aritcle.id}
-        </TableCell>
-        <TableCell>
-          <div className="open-detail-modal" onClick={this.openDetailModal(aritcle)}>  {aritcle.title}</div>
-
-        </TableCell>
-
-        <TableCell>
-          {aritcle.create_date}
-        </TableCell>
-
-        <TableCell>
-          {aritcle.update_date}
-        </TableCell>
-
-        <TableCell>
-          <Button variant="contained" color="primary"  >Update</Button>
-
-          <Button variant="contained" color="secondary"  >Delete</Button>
-        </TableCell>
-      </TableRow>
-    )
   }
-
 
 
   render() {
     const { articleList } = this.props;
 
-    const {isDetailModalOpen, detailModalArticle}=this.state;
+    const { isDetailModalOpen, detailModalArticle } = this.state;
     return (
       <div className="admin-article-list-container">
         <div className="tool-bar">
@@ -99,7 +79,11 @@ class ArticleManagerPage extends Component {
 
 
               <TableBody>
-                {articleList.map((article) => this.renderArticleItem(article))}
+                {articleList.map((article) => <ArticleDetailItem
+                  openDetailModal={this.openDetailModal}
+                  deleteArticle={this.onDeleteArticle}
+                  updateArticle={this.openDetailModal}
+                  article={article} />)}
 
 
               </TableBody>
@@ -111,7 +95,7 @@ class ArticleManagerPage extends Component {
           closeFunc={this.closeDetailModal}
           article={detailModalArticle}
           isOpen={isDetailModalOpen}
-        
+
         />
       </div>
     );

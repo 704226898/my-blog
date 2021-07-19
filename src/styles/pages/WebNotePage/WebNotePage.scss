@@ -9,7 +9,12 @@
   display: flex;
   flex-direction: row-reverse;
 }
-
+.dark {
+  .tag-list-container{
+    border-color: green;;
+    border-width: 2px;
+  }
+}
 
 
 
@@ -19,6 +24,7 @@
   width: 230px;
   height: 100%;
 }
+
 
 @media screen and (max-width: 1200px) {
   .web-article-page-container {

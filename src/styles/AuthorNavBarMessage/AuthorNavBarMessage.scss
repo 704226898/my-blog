@@ -1,0 +1,25 @@
+.author-navBar-message-container {
+  height: 300px;
+  padding: 20px;
+  overflow: hidden;
+  border-bottom: solid 1px #c0c0c0;
+  border-right: solid 1px #c0c0c0;
+  border-bottom-right-radius: 20px;
+  color: white;
+}
+
+.dark {
+  .author-navBar-message-container{
+  
+    border-color: green;;
+    border-width: 2px;
+    color: #c0c0c0;
+  }
+}
+.author-navBar-message-avatar img {
+
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
